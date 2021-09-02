@@ -58,7 +58,7 @@ body::after
 .container .card
 {
 position: relative;
-width: 250px;
+width: 270px;
 height: 450px;
 margin:20px;
 box-shadow: 10px 0 30px rgba(0,0,0,0.3);
@@ -78,7 +78,7 @@ backdrop-filter: blur(15px);
 .container .card1 
 {
     position: absolute;
-    width: 250px;
+    width: 270px;
     height: 480px;
     display: flex;
     align-items: center;
@@ -105,6 +105,8 @@ backdrop-filter: blur(15px);
 .container .card .content
 {
     padding: 5px;
+    max-height: 450px;
+    max-width: 250px;
     text-align: center;
     transition: 0.5s;
     transform: translateY(100px);
@@ -194,7 +196,7 @@ li
     width: 170px;
     height: 80px;
     border-radius: 75px;
-    margin: 50px 0;
+    margin: 50px 10px;
     z-index: auto;
     }
 
