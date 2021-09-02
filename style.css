@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap&effect=shadow-multiple|3d');
+
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
     
 }
 
@@ -46,7 +49,7 @@ body::after
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     flex-wrap: wrap;
     z-index: 2;
     text-decoration-style: none;
@@ -55,10 +58,10 @@ body::after
 .container .card
 {
 position: relative;
-width: 280px;
-height: 480px;
-margin:30px;
-box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+width: 250px;
+height: 450px;
+margin:20px;
+box-shadow: 10px 0 30px rgba(0,0,0,0.3);
 border-radius: 15px;
 background: rgba(255,255,255,0.1);
 overflow: hidden;
@@ -70,18 +73,45 @@ border-left: 1px solid rgba(255,255,255,0.5);
 -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
 backdrop-filter: blur(15px);
 
-
 }
+
+.container .card1 
+{
+    position: absolute;
+    width: 250px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 8em;
+    font-family: 'roboto', sans-serif;
+    opacity: 1;
+    transition: 1s;
+    z-index: 3;
+    }
+
+.container .card1 h1
+{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        }
+
+.container .card1:hover h1
+    {
+        opacity: 0;
+    }
+
 .container .card .content
 {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     transition: 0.5s;
     transform: translateY(100px);
     opacity: 0;
 
 }
-.container .card:hover .content
+.container .card:hover .content 
 {
     transform: translateX(0px);
     opacity: 1;
@@ -91,12 +121,11 @@ backdrop-filter: blur(15px);
 
 .container .card .content h2
 {
-font-family: 'Rampart One',sans-serif;
+font-family: 'roboto',sans-serif;
 font-size: 1.8em;
+font-weight: bold;
 padding: 10px;
-background: -webkit-linear-gradient(#12c2e9,#d28ff3,#ec7b83);
-background-clip: text;
--webkit-text-fill-color: transparent;
+text-decoration-color: antiquewhite;
 z-index: 1;
 
 }
@@ -118,8 +147,7 @@ z-index: 1;
 .container .card .content .img img
 {
     border-radius: 50%;
-    border-image-source: linear-gradient(to left, #00C853, #B2FF59);
-    box-shadow: 0 0 50px red;
+    
     
 }
 .info h5
@@ -144,32 +172,51 @@ li
 .container .card .content a 
 {
   position: relative;
-  font-size: 1.5em;
+  font-size: 1.8em;
   text-decoration: none;
-  background: -webkit-linear-gradient(#12c2e9,#c471ed,#f64f59);
-  padding: 5px;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  color:antiquewhite;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  top: 5px;
+  width: 140px;
+  height: 50px;
   
   }
 
-  .container .card .content a span{
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-name: namecolor;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+.container .card .content .button 
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 80px;
+    border-radius: 75px;
+    margin: 50px 0;
+    z-index: auto;
+    }
 
-  }
 
-  @keyframes namecolor{
-    20.6%{background-color: #0e365c;}
-    33.2%{background-color: #c522cb;}
-    49.8%{background-color: #b11c24;}
-    66.4%{background-color: #b11c24;}
-    83%{background-color: #c522cb;}
-    100%{background-color: #0e365c;}
+
+
+.container .card .content .button:hover
+{
+    border: 0.8rem solid #12e5e9;
+    box-shadow : 5px 5px 10px #12e5e9,
+                5px -5px 10px #12e5e9,
+                -5px -5px 10px #12e5e9,
+                -5px 5px 10px #12e5e9;
+                
+    transition: 0.5s ease-in-out;
+    
+    
 }
+.container .card .content .button span:hover
+{
+  color:#0a0f13;  
+  }
 
 /**********svg circle*******/
 
@@ -178,6 +225,7 @@ li
     top:-9px;
     left: 45px;
     z-index: 1;
+    overflow: hidden;
     
 }
 
@@ -187,6 +235,7 @@ li
     bottom: -50px;
     right:-250px;
     z-index: 1;
+    overflow: hidden;
 }
 
 
